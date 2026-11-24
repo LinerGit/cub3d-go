@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func parse_scene(name string) ([]byte, error) {
+func ParseScene(name string) ([]byte, error) {
 	fsys := os.DirFS(".")
 	data, err := fs.ReadFile(fsys, name)
 	if err != nil {

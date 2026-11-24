@@ -2,6 +2,8 @@ package main
 
 import (
 	"log"
+
+	p "github.com/LinerGit/cub3d-go/internal/parser"
 )
 
 const winWidth, winHeight = 960, 600
@@ -17,7 +19,7 @@ type rgba struct {
 }
 
 func main() {
-	data, err := scene_parser.parse_scene("scene.cub")
+	data, err := p.ParseScene("scene.cub")
 	if err != nil {
 		log.Fatal(err)
 	}
